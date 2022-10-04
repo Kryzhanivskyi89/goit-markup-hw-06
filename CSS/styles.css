@@ -425,13 +425,15 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
  
 .button-close:hover,
 .button-close:focus {
-    fill: var(--logo-color);    
+    fill: var(--logo-color);
+    border: 1px solid var(--logo-color);
     }
 
 .modal-p {
@@ -460,6 +462,7 @@ body {
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.01em;
+    margin-bottom: 4px;
 }
 .input-wrap {
     position: relative; 
@@ -535,16 +538,18 @@ body {
     border-radius: 2px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .accept input:checked + .check-box {
     background-color: var(--logo-color);
     border: 2px solid var(--logo-color);
 }
 .accept input:focus + .icon-checkbox {
-        fill: var(--logo-color);
+    fill: var(--logo-color);
 }
-
+.policy {
+    color: var(--logo-color);
+}
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -574,7 +579,7 @@ body {
     background-color: #188CE8;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        
+    
 }
 
 .modal-button:hover,
@@ -917,7 +922,7 @@ body {
     
     background: #2F303A;
     color: rgba(255, 255, 255, 0.6);
-    
+    outline: none;
     
     font-family: 'Roboto';
     font-size: 16px;
