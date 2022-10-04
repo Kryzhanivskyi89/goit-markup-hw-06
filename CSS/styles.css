@@ -424,8 +424,7 @@ body {
     background-color : #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    cursor: pointer;
-    
+    cursor: pointer;    
     transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
@@ -483,9 +482,8 @@ body {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    outline: none;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus + svg {
     fill: var(--logo-color);
@@ -507,17 +505,18 @@ body {
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .coment:focus {
     border-color: var(--logo-color);
 }
 .accept {
+    position: relative;
     display: flex;
     align-items: center;
     margin-top: 20px;
-    margin-left: 54px;
+    margin-left: 76.38px;
     margin-bottom: 30px;
     color: var(--secondary-color);
     font-size: 14px;
@@ -528,6 +527,9 @@ body {
 
 }
 .check-box {
+    position: absolute;
+    left: -24.38px;
+    top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -536,8 +538,6 @@ body {
     width: 16px;
     height: 15px;
     border-radius: 2px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .accept input:checked + .check-box {
@@ -935,8 +935,8 @@ body {
     border-radius: 4px;
     width: 358px;
     height: 50px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .footer-input::placeholder {
